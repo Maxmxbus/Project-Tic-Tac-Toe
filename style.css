@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playwrite+VN:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playwrite+VN:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+VN:wght@100..400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid black;  */
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+body{
+    background:radial-gradient(circle, #b907e6bb 36%, #05f1de 62%);
+}
+#madeBy{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+    font-family: "Cedarville Cursive", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.mainDisplay{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 100px 240px 100px;
+}
+.heading{
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    grid-area: 1 / 1 / 2 / 4
+}
+.board{
+    display: grid;
+    grid-template-columns: 50px 50px 50px;
+    grid-template-rows: 50px 50px 50px;
+    justify-content: center;
+    align-content: center;
+    margin-top: 10px
+}
+.tile.disabled {
+    pointer-events: none;
+}
+.tile{
+    font-family: "Playwrite VN", cursive;
+    font-optical-sizing: auto;
+    font-weight: 2000;
+    font-style: normal;
+    border: 1px solid black;
+    width: 50px;
+    border-radius: 100%;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tile:hover{
+    background-color: rgba(0, 0, 0, 0.24);
+    color: white;
+}
+.tile:active{
+    background-color: white;
+    color: black;
+}
+.xMark, .oMark{
+    align-self: center;
+}
+.player1, .player2{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    margin: 10px;
+}
+.reset{
+    display: flex;
+    justify-content: center
+}
+.reset{
+    grid-area: 3 / 1 / 4 / 4
+}
+.resetBtn{
+    width: 100px;
+    height: 40px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: blue;
+    border: yellow 1px solid;
+    color: white;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+.resetBtn:hover{
+    background-color: transparent;
+    color: blue;
+    border: 1px solid blue;
+    transition: .5s ease-in-out;
+}
